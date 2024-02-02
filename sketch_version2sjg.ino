@@ -34,10 +34,11 @@ void setup() {
 void loop() {
   CanData canMessage;
 
-  // Transmit CAN message
+  // Överför CAN-meddelanden
   sendCanMessage();
 
-  // Receive and process CAN message
+  // Tar emot och bearbetar CAN-meddelanden
+  
   if (CAN_MSGAVAIL == CAN.checkReceive()) { 
     readCanMessage(canMessage); 
     writeDataToSD(canMessage);
